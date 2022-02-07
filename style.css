@@ -1,0 +1,261 @@
+* {
+	margin: 0;
+	padding: 0;
+box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    background:linear-gradient( 45deg, pink,white);
+
+	min-height: 100vh;	
+}
+
+.container {
+	position: relative;
+}
+.container .card {
+	position: relative;
+	top:10%;
+
+	width: 420px;
+	height: 550px;
+
+	background: rgb(243, 133, 151);
+
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.container .card:before {
+	content: "Apple iPhone 13 (128GB ROM, MLPK3HN/A, pink)   50% off US $799";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: pink;
+	transition: 0.5s ease-in-out;
+	clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+	padding: 2%;
+	color: darkred;
+	font-size: 20px;
+	text-align: center;
+}
+
+.container:hover {
+	box-shadow: 0 0px 6px #fa4ecf, 0 0 6px #f35ece, 0 0 12px #fa95ec,
+		0 0 24px rgb(250, 100, 187);
+	z-index: 156;
+
+	border-radius: 20px;
+}
+
+.container .card:hover:before {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 20%, 0% 20%);
+}
+
+.container .card {
+	background: url("p-1-iphone-wallpaper.jpg");
+}
+.container .card .imgBx {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 10000;
+	width: 100%;
+	height: 220px;
+	transition: 0.5s;
+}
+
+.container .card:hover .imgBx {
+	top: 20%;
+	transform: translateY(0%);
+}
+.container .card .imgBx img {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 370px;
+}
+.container .card .contentBx {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	transition: 1s;
+	z-index: 10;
+}
+.container .card:hover .contentBx {
+	height: 210px;
+}
+.container .card .contentBx h2 {
+	position: relative;
+	font-weight: 600;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.container .card:hover .contentBx .size {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+.card .contentBx .size,
+.container .card .contentBx .color {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 20px;
+	transition: 0.5s;
+	opacity: 0;
+	visibility: hidden;
+}
+.container .card:hover .contentBx .size {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.5s;
+}
+.container .card:hover .contentBx .color {
+	opacity: 1;
+	visibility: visible;
+	transition-delay: 0.6s;
+}
+.container .card .contentBx .size h3,
+.container .card .contentBx .size h3 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-right: 10px;
+}
+.container .card .contentBx .size span {
+	width: 56px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+	font-size: 14px;
+	display: inline-block;
+	color: #111;
+	background: #fff;
+	margin: 0 5px;
+	transition: 0.5s;
+	color: #111;
+}
+
+.container .card .contentBx .size span:hover {
+	background: pink;
+}
+
+.container .card .contentBx .color span {
+	width: 20px;
+	height: 20px;
+	background: pink;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.container .card .contentBx .color span:nth-child(2) {
+	background: black;
+}
+.container .card .contentBx .color span:nth-child(3) {
+	background: silver;
+}
+.container .card .contentBx .color span:nth-child(4) {
+	background: white;
+}
+.container .card .contentBx a {
+	display: inline-block;
+	padding: 20px 30px;
+	background: hotpink;
+	border-radius: 4px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-weight: 600;
+	color: #111;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 0.5s;
+}
+.container .card:hover .contentBx a {
+	opacity: 1;
+	transform: translateY(0px);
+	transition-delay: 0.75s;
+}
+
+button:nth-child(2){
+	position: absolute;
+	bottom:-18%;
+	left: 50%;
+	transform: translate(-50% , -50%);
+
+	height: 50px;
+	width: 50px;
+
+	border-radius: 50%;
+	border:none;
+	box-shadow: 0px 0px 5px 5px rgb(243, 92, 243) ;
+	background:linear-gradient( 45deg, rgb(247, 10, 187),black);
+	color: white;
+}
+.dark-mode {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    background:linear-gradient( 45deg, rgb(247, 10, 187),black);
+
+	min-height: 100vh;	
+  }
+
+@media (max-width:500px){
+	.container .card {
+	
+		width: 380px;
+		height: 490px;
+	
+	}
+
+	.container .card .imgBx img {
+		
+		width: 300px;
+		top: 30%;
+
+	}
+}
+@media (max-width:400px){
+	.container .card {
+	
+		width: 320px;
+		height: 490px;
+	
+	}
+
+	.container .card .imgBx img {
+		
+		width: 270px;
+		top: 35%;
+
+	}
+}
+
+@media (max-width:350px){
+	.container .card {
+	
+		width: 270px;
+		height: 450px;
+	
+	}
+
+	.container .card .imgBx img {
+		
+		width: 230px;
+		top: 30%;
+
+	}
+}
